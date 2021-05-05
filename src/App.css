@@ -1,38 +1,299 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap');
+.app{
+  background: rgb(0, 0, 0);
+/* background: linear-gradient(180deg, rgb(0,0,0) 26%, rgb(4, 17, 29) 48%,rgb(4, 14, 24) 58%, rgb(220, 229, 231) 88%); */
+  background-attachment: fixed;
+  font-family: 'Dosis', sans-serif;
+  color:white;
+  margin-bottom: 0px;
+ 
+}
+.nav.navbar.navbar-expand-lg.navbar-light {
+  background-image: linear-gradient(rgba(1,1,1,0.9), rgba(1,1,1,0.7),rgba(0,0,0,0.5),rgba(0,0,0,0.1));
+
+}
+ .banner{
+  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("LostinTranslation-Movie-WallpaperP.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+ min-height:650px;
+  padding-top:0.8rem;
+  font-weight: 500;
+  color:white;
+  background-attachment: fixed;
+  position:relative;
+ }
+
+ .max-height{
+   margin-top:10rem;
+ }
+ .title-banner{
+   margin-top:5rem;
+   font-weight:500 ;
+   
+   
+   background-color: rgba(0,0,0,0.5);
+   padding:3rem 0.2rem;
+ }
+
+ .navbar-light .navbar-nav a{
+  color:  #bdbdbd!important;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding-right: 1.4rem;
+}
+
+/*--------style container des card---*/
+.bgcards{
+  
+  background-attachment: fixed;
+  color:white;
+  padding:2rem;
+}
+
+/*----------icon card-------*/
+#icon1{
+  color:white;
+}
+#icon1:hover{
+  color:rgb(194, 58, 54)
+}
+/* ----icon rating---------*/
+#iconstar{
+  color:rgb(226, 190, 72)
+}
+
+
+
+
+.cardexp .product-links{
+  width: 145px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 100%;
+  left: 60%;
+  transition: all 0.6s ease 0s;
+}
+.cardexp:hover .product-links{
+  opacity: 1;
+  top: 50%;
+}
+.cardexp .product-links li{
+  display: inline-block;
+  margin: 0 2px;
+}
+.cardexp .product-links li a {
+ 
+  background:rgba(0, 0, 0, 0.5) ;
   text-align: center;
+  font-size:16px;
+  padding:5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: block;
+  position: relative;
+  transition: all 0.4s ease-out 0s;
+}
+.cardexp .product-links li a i{
+  color:white;
+}
+.cardexp .product-links li a i:hover{
+  color: rgb(226, 183, 63);
+  box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* #search-icon{background-color:rgb(161, 108, 72);
+border:none;} */
+
+
+
+ Form{
+  position: relative;
+  
+  transition: all 1s;
+  
+  background: rgb(15, 15, 15);
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 2px solid white;
+  padding: 5px;
+}  
+
+.InputGroup{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* .fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1em;
+  transition: all 1s;
+}  */
+
+
+Form:hover{
+  width: 200px;
+  cursor: pointer;
+}
+
+Form:hover Input{
+  display: block;
+}
+
+
+/* Form:hover .fas{
+  background: #07051a;
+  color: rgb(184, 56, 56);
+} */
+/*---------style icon navbar---------*/
+.iconav{
+  font-size: 1.4rem;
+}
+.iconav:hover{
+  color:rgb(194, 58, 54)
+}
+
+.iconav{
+  font-size:1.5rem;
+  text-decoration: none;
+  color:white;
+
+}
+
+.iconav .badge{
+  margin-left:-1.9rem;
+  margin-top:-4px;
+  position: absolute;
+  padding:5px 8px;
+  font-size:13px;
+  font-weight: 500;
+}
+
+
+/*---------------------style footer----------------*/
+.bgfooter{
+  margin-top: 10rem;
+  margin-bottom:0px;
+  background-image: url(footer_bg.png);
+  background-repeat: no-repeat;
+  background-position:top;
+  background-attachment: fixed;
+ 
+  padding:0rem 4rem;
+  background-size: cover;
+  min-height: 400px;
+  padding-top: 90px;
+  color: #bdbdbd;
+ 
+
+}
+
+.bgfooter a{
+  text-decoration: none;
+  color: #bdbdbd;}
+
+  #search-item{
+  
+    padding:1.3rem 2rem;
+   
+    background: rgba(34, 32, 32, 0.5) ;
+    border: none;
+    border:0.5px groove rgb(156, 155, 155);
+  
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #bs{
+    background: rgba(20, 19, 19, 0.5) ;
+    border: none;
+    border:0.5px groove rgb(156, 155, 155);
   }
-  to {
-    transform: rotate(360deg);
+
+  #search-item:focus{
+    border:1px solid white;
   }
-}
+
+
+
+  /*-----------style film card---------*/
+  .imgexp {
+    width:auto;
+    height:22rem;
+    border-radius: 0.6rem;
+    object-fit: fill;
+    transition: all 1s ease-in-out;
+    filter: grayscale(0.6);
+  
+  }
+  .cardexp:hover .imgexp{
+    transform: scale(1.2);
+    filter: grayscale(0);
+    overflow-y: hidden;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
+  }
+  .cardexp{
+   
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgba(rgb(11, 16, 31),0.8);
+  
+  }
+  
+  .imgfilm{
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .content{
+    opacity: 0;
+    position: absolute;
+    margin-top:-5rem;
+    padding: 0.3rem 0rem;
+    background-color:rgba(0,0,0,0.7);
+    width:100%;
+    object-fit: cover;
+    transform: translateX(-10px);
+    transition:all 0.5s ease-in-out; 
+   
+  }
+  .cardexp:hover .content{ 
+    opacity: 1;
+    position: absolute;
+    margin-top:-6rem;
+  
+    padding: 0.3rem 0rem;
+    background-color:rgba(0,0,0,0.7);
+   
+    object-fit: auto;
+    transform: translateX(5px);
+    transition:all 1s ease-in-out;
+    color: white;
+    font-weight:500;
+  }
