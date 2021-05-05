@@ -25,8 +25,8 @@ const [movie, setMovie] = useState([])
           <div className="cardexp">
           <div className="imgfilm mb-3"> <img src={el.image} className="imgexp"/> 
           <ul className="product-links">
-            <li><a href="#" data-tip="Ajouter aux favoris"><i class="far fa-heart fa-2x"></i></a></li>
-             <li><a href="#" data-tip="Regarder trailer"><i class="fas fa-play-circle fa-2x"></i></a></li>
+            <li><a href="#" data-tip="Ajouter aux favoris"><i class="fa fa-heart fa-2x"></i></a></li>
+             <li><a href="#" data-tip="Regarder trailer"><i class="fa fa-play-circle fa-2x"></i></a></li>
           </ul>
           
           <div className="content">
