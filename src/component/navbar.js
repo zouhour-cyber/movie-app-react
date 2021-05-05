@@ -30,10 +30,10 @@ const Menu =(props) => {
   
     </Nav>
  
-    <Form action="" className="mr-3">
-  <InputGroup type="search" placeholder="search "> 
+    <Form action="" className="mr-4">
+  <input type="search" placeholder="search "/> 
   <i  className="fas fa-search"></i>
-  </InputGroup>
+ 
 </Form>
 
    <Link to="/favoris" className="iconav"> <i class="far fa-heart  mr-4" ></i> <span className="badge badge-danger rounded-circle">0</span></Link>
