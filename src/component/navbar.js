@@ -1,9 +1,11 @@
-// import logo-default-group-en.svg ./src;
+import {React }from 'react';
 import {Nav, Navbar} from 'react-bootstrap'
-import {Form ,InputGroup} from 'react-bootstrap';
+import {Form } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-// import src from '*.avif';
-const Menu =(props) => {
+
+function Menu({search, handelChange}) {
+
+  
   return (
     <div> 
 <Navbar  className="nav" collapseOnSelect fixed="top" expand="lg" variant="light" >
@@ -26,14 +28,14 @@ const Menu =(props) => {
       <Link to="/about">About</Link>
       <Link to="/contact">Contact</Link>
     
-
-  
     </Nav>
  
-    <Form action="" className="mr-4">
-  <input type="search" placeholder="search "/> 
+    <Form className="mr-4">
+  <input type="search" placeholder="search"  onChange={handelChange} /> 
+   
+  
   <i  className="fas fa-search"></i>
- 
+
 </Form>
 
    <Link to="/favoris" className="iconav"> <i class="far fa-heart  mr-4" ></i> <span className="badge badge-danger rounded-circle">0</span></Link>
@@ -41,7 +43,7 @@ const Menu =(props) => {
   </Navbar.Collapse>
 </Navbar>
   
-     
+    
     
  
     </div>

@@ -1,4 +1,5 @@
 import {Button ,Row, Col, InputGroup , FormControl} from 'react-bootstrap'
+import {Link} from 'react-router-dom';
 
 function Footer() {
     return(
@@ -37,7 +38,7 @@ function Footer() {
       <InputGroup>
       <FormControl type="text" id="search-item" placeholder="Adresse e-mail"/>
       <InputGroup.Append>
-          <Button id="bs" type="submit"> <i class="fa fa-send ml-2"> </i></Button>
+          <Button id="bs" type="submit"> <i class="fa fa-send mx-1"> </i></Button>
     </InputGroup.Append>
         </InputGroup>
    </Col>
@@ -45,7 +46,7 @@ function Footer() {
 
 <Col md={12} className="text-center mt-5">
 <hr color="white"/>
- <p><a href="">  NOXE </a> © Copyright 2021</p>
+ <p><Link to="/">  NOXE </Link> © Copyright 2021</p>
  </Col>
  </Row>
 

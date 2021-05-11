@@ -8,7 +8,7 @@ function Contact (){
             <div>
                 <Menu/>
                 <Container fluid className="mt-5">
-            <h2 > Contactez nous</h2> 
+          
             </Container>   
             </div>
         )

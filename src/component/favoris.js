@@ -1,12 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Menu from './navbar'
+import { Container } from 'react-bootstrap'
+
 
 const Favoris =(props) => {
    
         return (
             <div>
                 <Menu/>
-            <h2> My favorite movies</h2>    
+                <Container fluid>
+                <h2 className="mt-5"> mes favoris </h2>
+                </Container>
             </div>
         )
 

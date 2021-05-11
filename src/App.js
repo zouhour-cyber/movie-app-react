@@ -1,9 +1,6 @@
 import React from 'react';
-// import {Row, Col, Container} from 'react-bootstrap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Movie from './component/movie';
-import Menu from './component/navbar';
 import  Footer from './component/footer';
 import Favoris from './component/favoris';
 import Contact from './component/contact';

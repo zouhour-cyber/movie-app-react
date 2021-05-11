@@ -1,26 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat&display=swap');
 .app{
-  background: rgb(0, 0, 0);
+  background: black;
 /* background: linear-gradient(180deg, rgb(0,0,0) 26%, rgb(4, 17, 29) 48%,rgb(4, 14, 24) 58%, rgb(220, 229, 231) 88%); */
   background-attachment: fixed;
-  font-family: 'Dosis', sans-serif;
+  /* font-family: 'Dosis', sans-serif; */
+  font-family: 'open sans' , sans-serif;
   color:white;
   margin-bottom: 0px;
+  overflow: hidden;
  
 }
-.nav.navbar.navbar-expand-lg.navbar-light {
-  background-image: linear-gradient(rgba(1,1,1,0.9), rgba(1,1,1,0.7),rgba(0,0,0,0.5),rgba(0,0,0,0.1));
+p{
+
+ font-family: 'open sans' , sans-serif;
+  letter-spacing: .02em;
 
 }
+h1,h2,h3{
+ font-family:'Bebas Neue', cursive;
+ letter-spacing: .06em;
+
+
+}
+.nav.navbar.navbar-expand-lg.navbar-light {
+  background-image: linear-gradient(rgba(1,1,1,0.9), rgba(1,1,1,0.7),rgba(0,0,0,0.2),rgba(0,0,0,0.1));
+ /* border-bottom: 1px groove rgb(156, 155, 155); */
+}
+
+/*--------------style banner home-------*/
  .banner{
-  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("LostinTranslation-Movie-WallpaperP.jpg");
-  background-position: bottom;
+  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("1d-landing-page-hero-us-pl-5-lady-bird.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
- min-height:650px;
+ min-height:630px;
   padding-top:0.8rem;
   font-weight: 500;
   color:white;
@@ -28,16 +44,82 @@
   position:relative;
  }
 
+.text-banner{
+  font-family:'Bebas Neue', cursive;
+  /* letter-spacing: .04em; */
+  font-size: 4rem;
+  font-weight:500;
+}
  .max-height{
-   margin-top:10rem;
+   margin-top:13rem;
+   text-align: center;
+   
  }
+
+.circle {
+  width:130px;
+  height:130px;
+  border-radius: 50%;
+  border:2px solid rgb(163, 162, 162);
+  font-size:5rem ;
+ }
+.circle a{
+  color: rgba(94, 173, 147,0.5);
+}
+.circle a:hover{
+color:cadetblue;
+}
+
+
+ .device{
+  color: white;
+  background-color:black;
+   padding:4rem 3rem;
+ }
+ /* .relative{
+   position: relative;
+ }
+ iframe{
+   position: absolute;
+   margin-top: 50rem;
+   z-index:-1;
+ } */
+ /* style section device----------*/
+ .device .text{
+  margin-top:3rem;
+ 
+ }
+ .device img{
+   max-width: 100%;
+   height:auto;
+
+ }
+/*------------style banner page about------*/
+ .bannerAbout{
+  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("alex-litvin-MAYsdoYpGuk-unsplash.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height:400px;
+  padding-top:0.8rem;
+  font-weight: 500;
+  color:white;
+  background-attachment: fixed;
+  position:relative;
+
+ }
+ .bg-white{
+   
+   background-image: url("Devices-Background-Gradient.jpg");
+   background-attachment: fixed;
+   color:white;
+ }
+
  .title-banner{
-   margin-top:5rem;
    font-weight:500 ;
-   
-   
-   background-color: rgba(0,0,0,0.5);
-   padding:3rem 0.2rem;
+ color:black;
+   padding:6rem 0.2rem;
+   color:white;
  }
 
  .navbar-light .navbar-nav a{
@@ -51,8 +133,10 @@
 .bgcards{
   
   background-attachment: fixed;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("h1-background-1.jpg");
   color:white;
-  padding:2rem;
+ 
+  padding:2rem 2rem;
 }
 
 /*----------icon card-------*/
@@ -67,7 +151,9 @@
   color:rgb(226, 190, 72)
 }
 
-
+.cardexp img{
+  width:100%;
+}
 
 
 .cardexp .product-links{
@@ -76,38 +162,40 @@
   margin: 0;
   list-style: none;
   opacity: 0;
-  transform: translateX(-50%) translateY(-70%);
+  transform: translateX(70%) translateY(-70%);
   position: absolute;
-  top: 100%;
-  left: 60%;
+  top: 50%;
+  left: 100%;
   transition: all 0.6s ease 0s;
 }
 .cardexp:hover .product-links{
   opacity: 1;
   top: 50%;
+  left:45%;
 }
-.cardexp .product-links li{
+.cardexp .product-links li a{
   display: inline-block;
-  margin: 0 2px;
+  margin: 4px 2px;
 }
 .cardexp .product-links li a {
  
-  background:rgb(0, 0, 0, 0.2) ;
+  background-color:rgba(0,0,0,0.7);
   text-align: center;
-  font-size:16px;
-  padding:3px;
-  width: 40px;
-  height: 40px;
+  font-size:17px;
+  padding:5px 3px;
+  width:38px;
+  height: 38px;
   border-radius: 50px;
   display: block;
   position: relative;
   transition: all 0.4s ease-out 0s;
+ 
 }
 .cardexp .product-links li a i{
-  color:white;
+ color:white;
 }
 .cardexp .product-links li a i:hover{
-  color: rgb(226, 183, 63);
+  color: rgb(194, 58, 54);
   box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -198,7 +286,7 @@ Form:hover .fas{
 .bgfooter{
   margin-top: 10rem;
   margin-bottom:0px;
-  background-image: url(footer_bg.png);
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(movie-footer.webp);
   background-repeat: no-repeat;
   background-position:top;
   background-attachment: fixed;
@@ -269,18 +357,23 @@ Form:hover .fas{
     box-sizing: border-box;
   }
   .content{
-    opacity: 0;
+    
+    opacity: 1;
     position: absolute;
-    margin-top:-5rem;
-    padding: 0.3rem 0rem;
-    background-color:rgba(0,0,0,0.7);
+    margin-top:-5.5rem;
+    border-bottom-left-radius: 0.6;
+    border-bottom-right-radius: 0.6rem;
+    padding: 0.3rem 0.2rem 0rem 0rem;
+    background-color:rgba(0,0,0,0.2);
     width:100%;
     object-fit: cover;
-    transform: translateX(-10px);
+    transform: translateX(0px);
     transition:all 0.5s ease-in-out; 
-   
+    color: white;
+    font-weight:500;
+    line-height: 0.1;
   }
-  .cardexp:hover .content{ 
+  /* .cardexp:hover .content{ 
     opacity: 1;
     position: absolute;
     margin-top:-6rem;
@@ -293,4 +386,20 @@ Form:hover .fas{
     transition:all 1s ease-in-out;
     color: white;
     font-weight:500;
+  } */
+
+  .bgblack{
+    background-color: black;
   }
+
+
+.public{
+  background-color: white;
+  color:black;
+  padding:5rem;
+  
+}
+.public img{
+max-width: 100%;
+height:auto;
+}
