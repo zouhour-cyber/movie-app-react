@@ -1,21 +1,9 @@
-import React, {useState,useEffect} from 'react';
+import React from 'react';
 import {Row, Col, Container,Badge} from 'react-bootstrap';
 
-function Movie () {
+function Movie ({movie, addFAvorite}) {
 
-const [movie, setMovie] = useState([])
-  const getmovie = ()=>{
-    
-    fetch('movies.json').then(
-          response => response.json()).then 
-                   (movies => setMovie(movies));
-  }
-  
-  useEffect(()=> {getmovie()
-  },[])
 
-  console.log(movie)
-   const [count, setCount]=useState("")
   return(
 
       <Container fluid >
@@ -25,7 +13,7 @@ const [movie, setMovie] = useState([])
           <div className="cardexp">
           <div className="imgfilm mb-3"> <img src={el.image} className="imgexp"/> 
           <ul className="product-links">
-            <li><a href="#"><i class="fa fa-heart fa-2x"></i></a></li>
+            <li><button onClick={addFAvorite}> <i class="fa fa-heart fa-2x"></i></button></li>
              <li><a href="#"><i class="fa fa-play-circle fa-2x"></i></a></li>
           </ul>
           

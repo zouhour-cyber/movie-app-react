@@ -4,7 +4,7 @@ import Menu from './navbar';
 import {Row, Col, Container , InputGroup , FormControl ,Button } from 'react-bootstrap';
 
 
-function Home (){
+function Home ({movie, addFAvorite, favorite}){
     const [search, setSearch] = useState("");
     const handelChange=(e)=>{
        setSearch(e.target.value);
@@ -14,24 +14,24 @@ function Home (){
         <div>
     
     <Container className="banner" fluid>
-    <Menu handelChange={handelChange} search={search} /> 
+    <Menu handelChange={handelChange} search={search} favorite={favorite} /> 
     <Row className="d-flex justify-content-evenly mx-auto">
-      <Col md={6} xs={10} className="mx-auto max-height text-justify" >
-        <h2 class="text-banner">Free Guy</h2>
+      <Col md={6} xs={10} className="ml-auto max-height text-justify" >
+        <h5 class="text-banner">Films, Séries TV Et Bien Plus En Illimité.</h5>
         <h5> strange black entity from another world bonds with <br></br>
              Peter Parker and causes inner turmoil as </h5>
         
    <Row> 
    <Col md={6} xs={10} className="mt-4">
      
-       <Button variant="outline-light"> Start your free 14-days trial </Button>
+       <Button variant="danger"> Start your free 14-days trial </Button>
    </Col>
    </Row>
         </Col> 
 
-        <Col md={4} xs={10} className="mx-auto max-height">
+        {/* <Col md={4} xs={10} className="mx-auto max-height">
         <div className="circle"> <a href="https://www.youtube.com/watch?v=l28ZsecmuFc"> <i class="fa fa-play"></i> </a> </div> 
-        </Col>
+        </Col> */}
     </Row>
     </Container>
     <Container className="device" fluid>
@@ -71,7 +71,7 @@ function Home (){
     </Container>
    <Container  className="bgcards" fluid>
    <h1 className="text-center my-5">  Our latest movies </h1>
-   <Movie search={search}/>   
+   <Movie search={search} movie={movie} addFAvorite={addFAvorite} favorite={favorite}/>   
      
     </Container>
 

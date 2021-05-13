@@ -1,23 +1,9 @@
-import React, {useState,useEffect} from 'react';
+import React from 'react';
 import {Row, Col, Container,Badge} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+// import Rater from 'react-rater';
+// import 'react-rater/lib/react-rater.css'
 
-function Movie ({search}) {
-
-const [movie, setMovie] = useState([])
-
-  const getmovie = ()=>{
-    
-    fetch('movies.json').then(
-          response => response.json()).then 
-                   (movies => setMovie(movies));
-  }
-  
-  useEffect(()=> {getmovie()
-  },[])
-
-console.log("sarra",search)
-
+function Movie ({search, movie, addFAvorite}) {
 
   return(
     search==="" ? 
@@ -29,8 +15,8 @@ console.log("sarra",search)
           <div className="cardexp">
           <div className="imgfilm mb-3"> <img src={el.image} alt="imagemovie" className="imgexp"/> 
           <ul className="product-links">
-            <li><Link to='/favoris'><i class="fa fa-heart"></i></Link></li>
-             <li><a href="https://www.youtube.com/watch?v=wNFkFXORgQ"><i class="fa fa-play"></i></a></li>
+            <li><a  onClick={addFAvorite}><i class="fa fa-heart"></i></a></li>
+             <li><a ><i class="fa fa-play"></i></a></li>
           </ul>
           
           <div className="content">
@@ -45,6 +31,7 @@ console.log("sarra",search)
 
             </div>
             <div>  
+            {/* <Rater total={5} rating={el.rating} /> */}
             <h5> {el.rating} <i class="far fa-star  mr-2" id="iconstar"></i> </h5> 
             </div>
             </div>
@@ -65,7 +52,7 @@ console.log("sarra",search)
           <div className="cardexp">
           <div className="imgfilm mb-3"> <img src={el.image} alt="imagemovie" className="imgexp"/> 
           <ul className="product-links">
-            <li><Link to='/favoris'><i class="fa fa-heart "></i></Link></li>
+            <li><a href=""><i class="fa fa-heart "></i></a></li>
              <li><a href="youtube.comhttps://www.youtube.com/watch?v=wNFkFXORgQ"><i class="fa fa-play"></i></a></li>
           </ul>
           

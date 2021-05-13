@@ -32,7 +32,7 @@ h1,h2,h3{
 
 /*--------------style banner home-------*/
  .banner{
-  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("1d-landing-page-hero-us-pl-5-lady-bird.jpg");
+  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("landing-slisder-img-2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,7 +47,7 @@ h1,h2,h3{
 .text-banner{
   font-family:'Bebas Neue', cursive;
   /* letter-spacing: .04em; */
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight:500;
 }
  .max-height{

@@ -3,7 +3,7 @@ import {Nav, Navbar} from 'react-bootstrap'
 import {Form } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
-function Menu({search, handelChange}) {
+function Menu({ handelChange , favorite}) {
 
   
   return (
@@ -38,7 +38,7 @@ function Menu({search, handelChange}) {
 
 </Form>
 
-   <Link to="/favoris" className="iconav"> <i class="far fa-heart  mr-4" ></i> <span className="badge badge-danger rounded-circle">0</span></Link>
+   <Link to="/favoris" className="iconav"> <i class="far fa-heart  mr-4" ></i> <span className="badge badge-danger rounded-circle">{favorite}</span></Link>
     
   </Navbar.Collapse>
 </Navbar>
