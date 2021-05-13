@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row, Col, Container,Badge} from 'react-bootstrap';
-// import Rater from 'react-rater';
-// import 'react-rater/lib/react-rater.css'
+import Rater from 'react-rater';
+import 'react-rater/lib/react-rater.css'
 
 function Movie ({search, movie, addFAvorite}) {
 
@@ -31,8 +31,8 @@ function Movie ({search, movie, addFAvorite}) {
 
             </div>
             <div>  
-            {/* <Rater total={5} rating={el.rating} /> */}
-            <h5> {el.rating} <i class="far fa-star  mr-2" id="iconstar"></i> </h5> 
+            <Rater total={5} rating={el.rating} />
+            {/* <h5> {el.rating} <i class="far fa-star  mr-2" id="iconstar"></i> </h5>  */}
             </div>
             </div>
          

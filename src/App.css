@@ -403,3 +403,15 @@ Form:hover .fas{
 max-width: 100%;
 height:auto;
 }
+
+
+.react-rater-star.is-active{
+  color: rgb(240, 200, 69) !important;
+  font-size: 1.2rem !important;
+}
+.react-rater-star {
+ cursor: pointer;
+ color: white !important;
+ font-size: 1.2rem !important;
+ position: relative;
+}
