@@ -1,29 +1,29 @@
 [  
-{"title":"Dragon Daughter","image":"./image/dragon daughter.webp", "genre": "Comedy ,Musical" ,"rating":"5" ,"year":"2021"},
+{"title":"Dragon Daughter","image":"./image/dragon daughter.webp", "genre": "Comedy ,Musical" ,"rating":"4.5" ,"year":"2021"},
 { "title":"The witch Dairy", "image":"./image/the-witch-dairy.jpg", "genre" : [ "Fantasy ,","Horror"],"rating":"4" ,"year":"2019"},
 { "title":"Scream Park", "image":"./image/screampark.webp", "genre" : [ "Drama  ,", "Horror"] , "rating":"3" ,"year":"2018"},
-{"title":"Die Heard","image" :"./image/slider3.jpg","genre":"Adventure" , "rating":"4" ,"year":"2019" },
+{"title":"Die Heard","image" :"./image/slider3.jpg","genre":"Adventure" , "rating":"4.5" ,"year":"2019" },
 
 {"title":"The walk","image":"./image/slider4.jpg","genre":"Comedy", "rating":"5" ,"year":"2020"},
 
 
-{"title" : "Chasing Life","image" : "./image/casing-life.jpg","genre" : [ "Action ,", "Thriller"] , "rating":"5" ,"year":"2018"
+{"title" : "Chasing Life","image" : "./image/casing-life.jpg","genre" : [ "Action ,", "Thriller"] , "rating":"3.5" ,"year":"2018"
 },
-{ "title":"Darkness lisa", "image":"./image/darkness-lisa.webp", "genre":[ "Thriller ,", "Adventure"] , "rating":"5","year":"2017"},
+{ "title":"Darkness lisa", "image":"./image/darkness-lisa.webp", "genre":[ "Thriller ,", "Adventure"] , "rating":"4.5","year":"2017"},
 
 
 
 { "title":"Miss Lucy", "image":"./image/miss-lucy.webp",  "genre" : [ "Biography ,","Comedy"] , "rating":"4.5" ,"year":"2017"
 },
 {"title":"Wild life diary", "image" :"./image/wild-life-diary.webp", "genre":"Documentaire" , "rating":"4" ,"year":"2018"}
-,{"title":"The generation", "image" :"./image/the-generations.jpg", "genre":"Adventure" , "rating":"5" ,"year":"2018"}
+,{"title":"The generation", "image" :"./image/the-generations.jpg", "genre":"Adventure" , "rating":"3.5" ,"year":"2018"}
 
 
-,{"title":"Green book","image":"./image/Green-book.jpg","genre":"Aventure" , "rating":"4" ,"year":"2016"},
+,{"title":"Green book","image":"./image/Green-book.jpg","genre":"Aventure" , "rating":"4.5" ,"year":"2016"},
 
 {"title":"The star of stage", "image" :"./image/star-of-stage.webp", "genre":"Adventure" , "rating":"3" ,"year":"2018"},
      
-{ "title" : "Turn It Down, Or Else!", "image" : "./image/perfectmatch.jpg", "year" : "2015","genre" : [ "Comedy", "Drama"],
+{ "title" : "Turn It Down, Or Else!", "image" : "./image/perfectmatch.jpg", "rating":"3", "year" : "2015","genre" : [ "Comedy", "Drama"],
     "info" : {
         "directors" : [
             "Alice Smith",
@@ -40,7 +40,7 @@
 },
    
    {"title":"The pursuit of dreams", "image" :"./image/thepursuitofdreams.webp", "genre":"Adventure" , "rating":"4" ,"year":"2018"}
-    ,{"title":"The birds", "image" :"./image/the-birds.webp", "genre":"Documentaire" , "rating":"5" ,"year":"2018"}
-    ,{"title": "Get Out", "image": "./image/hikaru copy.jpg","duration": "50 min", "genre": [ "Horror","Mystery" ] , "rating":"5" ,"year":"2017"}
+    ,{"title":"The birds", "image" :"./image/the-birds.webp", "genre":"Documentaire" , "rating":"4.5" ,"year":"2018"}
+    ,{"title": "Get Out", "image": "./image/hikaru copy.jpg","duration": "50 min", "genre": [ "Horror","Mystery" ] , "rating":"3.5" ,"year":"2017"}
 
   ]

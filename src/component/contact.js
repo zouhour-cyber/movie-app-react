@@ -2,11 +2,11 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import Menu from './navbar'
 
-function Contact (){
+function Contact ({favorite}){
    
         return (
             <div>
-                <Menu/>
+                <Menu favorite={favorite}/>
                 <Container fluid className="mt-5">
           
             </Container>   

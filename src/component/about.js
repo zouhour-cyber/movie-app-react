@@ -3,12 +3,12 @@ import Menu from './navbar'
 import {Row, Col, Container} from 'react-bootstrap';
 
 
-function About(){
+function About({favorite}){
    
         return (
             <div>
                  <Container fluid className="bannerAbout ">
-                <Menu/>
+                <Menu favorite={favorite}/>
                 <Container>
                     <Row className="max-height">  
                  <Col md={5}> <h1 className="text-banner"> About us</h1>   </Col>

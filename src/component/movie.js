@@ -3,19 +3,19 @@ import {Row, Col, Container,Badge} from 'react-bootstrap';
 import Rater from 'react-rater';
 import 'react-rater/lib/react-rater.css'
 
-function Movie ({search, movie, addFAvorite}) {
+function Movie ({search, movie, addFAvorite, addfavoriteMovie}) {
 
   return(
     search==="" ? 
       <Container fluid >
      <Row className="d-flex bgcards">
        
-     {  movie.map(el=> 
+     {movie.map(el=> 
      <Col md={3} sm={6} xs={12} className="mt-3">
           <div className="cardexp">
           <div className="imgfilm mb-3"> <img src={el.image} alt="imagemovie" className="imgexp"/> 
           <ul className="product-links">
-            <li><a  onClick={addFAvorite}><i class="fa fa-heart"></i></a></li>
+            <li><a  onClick = { () => {addFAvorite(); addfavoriteMovie(el)}}><i class="fa fa-heart"></i></a></li>
              <li><a ><i class="fa fa-play"></i></a></li>
           </ul>
           
@@ -23,16 +23,16 @@ function Movie ({search, movie, addFAvorite}) {
             <div className="d-flex justify-content-around"> 
             <div>
             <h6 >  <Badge variant="danger">{el.genre}</Badge>  </h6>
-
-            <h6> {el.title}</h6>
-            <h6> {el.year}</h6>
-
+       
+           <div> <h6 > {el.title}</h6>  </div>
           
-
+            <div className="d-flex justify-content-between"> 
+            <div> <h6 className="mr-5"> {el.year}</h6>  </div>
+           <h6><Rater  interactive={false}  total={5} rating={el.rating} />  </h6> 
             </div>
+            </div>
+
             <div>  
-            <Rater total={5} rating={el.rating} />
-            {/* <h5> {el.rating} <i class="far fa-star  mr-2" id="iconstar"></i> </h5>  */}
             </div>
             </div>
          

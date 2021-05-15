@@ -9,6 +9,13 @@ import Home from './component/home';
 import { BrowserRouter, Route} from "react-router-dom";
 
 function App() {
+  const [favoritMovie,setfavoritMovie]=useState([])
+  const addfavoriteMovie =(e)=> {
+    favoritMovie.push(e)
+  
+  console.log(favoritMovie) }
+
+
   const [movie, setMovie] = useState([])
   const getmovie = ()=>{
     
@@ -20,8 +27,8 @@ function App() {
   useEffect(()=> {getmovie()
   },[])
 
-  console.log(movie)
-//add to favorit
+ 
+//incrémentation favorit icon
   const [favorite,setFavorite] =useState(0)
   const addFAvorite=() =>{
     setFavorite(favorite + 1)
@@ -30,10 +37,10 @@ function App() {
   return (
   <BrowserRouter>
   <div className="app">
-          <Route exact path="/" > <Home movie={movie} favorite={favorite} addFAvorite={addFAvorite}/></Route>
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/favoris"> <Favoris movie={movie} favorite={favorite}/></Route>
+          <Route exact path="/" > <Home movie={movie} favorite={favorite} addfavoriteMovie={addfavoriteMovie} favoritMovie={favoritMovie} addFAvorite={addFAvorite}/></Route>
+          <Route path="/about"> <About favorite={favorite}/></Route>
+          <Route path="/contact" > <Contact favorite={favorite}/></Route>
+          <Route path="/favoris"> <Favoris movie={movie} favorite={favorite} favoritMovie={favoritMovie}/></Route>
    
      <Footer/>
      </div>
