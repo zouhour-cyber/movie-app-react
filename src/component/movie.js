@@ -27,9 +27,10 @@ function Movie ({search, movie, addFAvorite, addfavoriteMovie}) {
            <div> <h6 > {el.title}</h6>  </div>
           
             <div className="d-flex justify-content-between"> 
-            <div> <h6 className="mr-5"> {el.year}</h6>  </div>
-           <h6><Rater  interactive={false}  total={5} rating={el.rating} />  </h6> 
-            </div>
+            <div className="mr-4"> <h6 > {el.year}</h6> </div>  <div className="mr-5"> <h6> {el.duré}</h6> </div>
+          
+          <div> <h6><Rater  interactive={false}  total={5} rating={el.rating} />  </h6>  </div>
+           </div>
             </div>
 
             <div>  
@@ -46,7 +47,7 @@ function Movie ({search, movie, addFAvorite, addfavoriteMovie}) {
      <Row className="d-flex bgcards">
        
      {  movie.filter(el => 
-     el.title.toLowerCase().includes(search.toLowerCase())
+    ( el.title.toLowerCase().includes(search.toLowerCase()) ) 
      ).map(el=> 
      <Col md={3} sm={6} xs={12} className="mt-3">
           <div className="cardexp">

@@ -48,17 +48,18 @@ function Home ({movie, addFAvorite, favorite, addfavoriteMovie}){
             </Col>
         </Row>
     </Container>
-    <Container className="bg-white py-5" fluid>
+ 
+    <Container className="bg-white " fluid>
     <Row  className="justify-content-center  title-banner">
-      <Col md={6} xs={10} className="mx-auto text-center " >
-        <h1 class="text-capitalize">Films, séries TV et bien plus en illimité. </h1>
-        <h6>Saisissez votre adresse e-mail pour vous abonner ou réactiver votre abonnement.</h6>
+      <Col md={10} xs={10} className="mx-auto text-center " >
+        <h1 class="text-capitalize">Rejoignez notre communauté</h1>
+        <h5>Abonnez-vous pour reçevoir nos offres</h5>
 
         </Col> 
  
-      <Col md={7} xs={12} className="mx-auto mt-4">
-      <InputGroup>
-      <FormControl type="text"  placeholder="Saisir votre adresse e-mail" />
+      <Col md={6} xs={12} className="mx-auto mt-5">
+      <InputGroup >
+      <FormControl type="text"  id="newsletter"  placeholder="Saisir votre adresse e-mail" />
       <InputGroup.Append>
           <Button  variant="danger" type="submit"  > s'abonner</Button>
     </InputGroup.Append>
@@ -69,11 +70,26 @@ function Home ({movie, addFAvorite, favorite, addfavoriteMovie}){
    
     </Row>
     </Container>
+    <Container >
+
+<Row  className="my-5">
+    <Col md={6} xs={12} className="">
+        <img src="image/mobile.png" alt="mobile"/> 
+      </Col>
+    <Col md={5} xs={10} >
+        <div className="text ">
+    <h2 className="mt-5"> Téléchargez vos séries préférées pour les regarder hors connexion.</h2>
+     <p className="mt-3"> Enregistrez vos programmes préférés et ayez toujours quelque chose à regarder.</p>
+     </div>
+    </Col>
+</Row>
+</Container>
    <Container  className="bgcards" fluid>
    <h1 className="text-center my-5">  Our latest movies </h1>
    <Movie search={search} movie={movie} addFAvorite={addFAvorite} favorite={favorite} addfavoriteMovie={addfavoriteMovie} />   
      
     </Container>
+
 
 
     </div>

@@ -24,6 +24,7 @@ const Favoris =({favorite, favoritMovie}) => {
        {favoritMovie.map(el=> 
        <Col md={3} sm={6} xs={12} className="mt-3">
             <div className="cardexp">
+                <div className="d-flex"> 
             <div className="imgfilm mb-3"> <img src={el.image} alt="imagemovie" className="imgexp"/> 
             <ul className="product-links">
                <li><a ><i class="fa fa-play"></i></a></li>
@@ -46,6 +47,7 @@ const Favoris =({favorite, favoritMovie}) => {
               </div> 
               </div>
             </div> 
+            </div>
          </Col>
      ) }
      </Row>

@@ -26,8 +26,10 @@ h1,h2,h3{
 
 }
 .nav.navbar.navbar-expand-lg.navbar-light {
-  background-image: linear-gradient(rgba(1,1,1,0.9), rgba(1,1,1,0.7),rgba(0,0,0,0.2),rgba(0,0,0,0.1));
+  /* background-image: linear-gradient(rgba(1,1,1,0.9), rgba(1,1,1,0.7),rgba(0,0,0,0.2),rgba(0,0,0,0.1)); */
  /* border-bottom: 1px groove rgb(156, 155, 155); */
+ background-color: black;
+ padding: 0.2rem 3rem ;
 }
 
 /*--------------style banner home-------*/
@@ -51,7 +53,7 @@ h1,h2,h3{
   font-weight:500;
 }
  .max-height{
-   margin-top:13rem;
+   margin-top:10rem;
    text-align: center;
    
  }
@@ -96,12 +98,12 @@ color:cadetblue;
  }
 /*------------style banner page about------*/
  .bannerAbout{
-  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("alex-litvin-MAYsdoYpGuk-unsplash.jpg");
+  background-image: url("alex-litvin-MAYsdoYpGuk-unsplash.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height:400px;
-  padding-top:0.8rem;
+  min-height:450px;
+  padding-top:5rem;
   font-weight: 500;
   color:white;
   background-attachment: fixed;
@@ -109,8 +111,11 @@ color:cadetblue;
 
  }
  .bg-white{
-   
-   background-image: url("Devices-Background-Gradient.jpg");
+   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("img_21.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+  padding: 11rem 2rem ;
+   /* background-image: url("Devices-Background-Gradient.jpg"); */
    background-attachment: fixed;
    color:white;
  }
@@ -118,12 +123,22 @@ color:cadetblue;
  .title-banner{
    font-weight:500 ;
  color:black;
-   padding:6rem 0.2rem;
+   padding:2rem 0.2rem;
    color:white;
  }
 
+ #newsletter{
+   /* background-color: rgba(177, 174, 170, 0.8); */
+   background: rgba(34, 32, 32, 0.5) ;
+   border: none;
+   border:0.5px groove rgb(156, 155, 155);
+   padding:1.3rem 2rem;
+
+   
+ } 
+
  .navbar-light .navbar-nav a{
-  color:  #bdbdbd!important;
+  color: white!important;
   font-size: 1.1rem;
   text-transform: uppercase;
   padding-right: 1.4rem;

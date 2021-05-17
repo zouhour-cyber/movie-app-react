@@ -1,23 +1,40 @@
-import React  from 'react'
+import React , {useState,useEffect}  from 'react'
 import Menu from './navbar'
-import {Row, Col, Container} from 'react-bootstrap';
+import Movie from '../component/movie';
+import {Row, Col, Container , InputGroup , FormControl ,Button } from 'react-bootstrap';
 
 
-function About({favorite}){
-   
+function About({ movie, addFAvorite, favorite, addfavoriteMovie}){
+    const [search, setSearch] = useState("");
+    const handelChange=(e)=>{
+       setSearch(e.target.value);
+    }
         return (
             <div>
-                 <Container fluid className="bannerAbout ">
-                <Menu favorite={favorite}/>
+                 <Container fluid className="bannerAbout">
+                <Menu favorite={favorite} handelChange={handelChange} search={search}/>
                 <Container>
                     <Row className="max-height">  
-                 <Col md={5}> <h1 className="text-banner"> About us</h1>   </Col>
+                 <Col md={5}> <h1 className="text-banner"> It's Movie time </h1>   </Col>
                     </Row>
                 </Container>
                 </Container>
+     <Row className="mx-auto my-5"> 
+     <Col md={6} xs={12} className="mx-auto py-4">
+      <InputGroup >
+      <FormControl type="text"  placeholder="Recherchez votre film préféré" onChange={handelChange}  />
+      <InputGroup.Append>
+          <Button  variant="danger" type="submit"  > search</Button>
+    </InputGroup.Append>
+        </InputGroup>
+        </Col>
+  </Row>
 
-
-     <Container >
+                <Container  className="bgcards mt-5" fluid>
+   <Movie search={search} movie={movie} addFAvorite={addFAvorite} favorite={favorite} addfavoriteMovie={addfavoriteMovie} />   
+     
+    </Container>
+     {/* <Container >
 
        <Row  className="my-5">
            <Col md={6} xs={12} className="">
@@ -30,10 +47,10 @@ function About({favorite}){
             </div>
            </Col>
        </Row>
-       </Container>
+       </Container> */}
 
 
-      <Container className="public" fluid> 
+      {/* <Container className="public" fluid> 
        <Row  className="d-flex justify-content-center"> 
     
    <Col md={5} className="text mt-5">
@@ -45,7 +62,7 @@ function About({favorite}){
        <img src="image/tvt.jpg" alt="public"/>
        </Col>
        </Row>
-       </Container> 
+       </Container>  */}
    
   
                
