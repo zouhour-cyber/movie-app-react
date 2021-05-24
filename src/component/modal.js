@@ -1,48 +1,82 @@
-// import {React ,useState} from 'react';
+import {React ,useState ,useEffect} from 'react';
+import {Modal, Button , Form, Col , Row } from 'react-bootstrap';
+import axios from 'axios';
 
-// import ModalTitle from 'react-bootstrap';
-// import ModalBody from 'react-bootstrap';
-// import ModalHeader from 'react-bootstrap';
-// import Modal from 'react-bootstrap/Modal';
-// import Button from 'react-bootstrap';
-// import ModalFooter from 'react-bootstrap/ModalFooter';
+const ModalEdit=({el}) =>{
+    const [show, setShow] = useState(false)
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    
+    const [UpdatedAt,setUpdatedAt] = useState( 
+        { title :el.title , genre:el.genre , image:el.image, rating:el.rating, year:el.year, duré:el.duré}
+      )
 
+    const handelUpdate=(e)=>{
+        const {name , value} =e.target;
+        setUpdatedAt( {
+            ...UpdatedAt,
+            [name]: value
+        })
+      }
+      console.log(UpdatedAt);
+        //update 
+        const update=(id) =>{
+            axios.put(`http://localhost:3007/posts/${id}`,UpdatedAt)
+            .then((res) => {setUpdatedAt(res.data)})
+          
+          .catch(err => console.log(err));
+        }
+          useEffect(() => {
+            update() 
+        }, [])
 
-
-// const Example=() =>{
-//     const [show, setShow] = useState(false);
+    return (
+      <div>
+      <li>  <a  onClick={handleShow}>
+        <i class="fas fa-pencil-alt"></i>
+        </a> </li>
   
-//     const handleClose = () => setShow(false);
-//     const handleShow = () => setShow(true);
+        <Modal
+        show={show} onHide={handleClose}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Noxe </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+         
+         
+          <Row > 
+        <Col   md={10} className="mx-auto mb-5">
+          
+        <Form >
+      <Form.Group  >
+     <Form.Control type="text" name="title" onChange={handelUpdate} defaultValue={el.title} placeholder="Titre de film" />
+     </Form.Group>
+     <Form.Group>
+     <Form.Control type="text" name="genre" onChange={handelUpdate}  defaultValue={el.genre}placeholder="Genre de film" />
+     </Form.Group>
+     <Form.Group>
+     <Form.Control type="text" name="duré" onChange={handelUpdate} defaultValue={el.duré} placeholder="Durée de film"  />
+     </Form.Group>
+     <Form.Group>
+     <Form.Control type="text" name="image" onChange={handelUpdate} defaultValue={el.image} placeholder="Poster de film"  />
+     </Form.Group>
+     <Form.Group>
+     <Form.Control type="text" name="rating" onChange={handelUpdate} defaultValue={el.rating} placeholder="Rating"  />
+     </Form.Group>
+     <Form.Group>
+     <Form.Control type="text" name="year" onChange={handelUpdate} defaultValue={el.year} placeholder="Date de sortie "  />
+     </Form.Group>
+     <Button  onClick={()=> update(el.id) } type="submit" variant="danger"  className="btn-block">  Modifier le film</Button>
+   </Form>
+   </Col>
+   
+   </Row>
+          </Modal.Body>
+        
+        </Modal>
+      </div>
+    );
+  }
   
-//     return (
-//       <div>
-//         <Button variant="primary" onClick={handleShow}>
-//           Launch static backdrop modal
-//         </Button>
-  
-//         <Modal
-//           show={show}
-//           onHide={handleClose}
-//           backdrop="static"
-//           keyboard={false}
-//         >
-//           <Modal.Header closeButton>
-//             <Modal.Title>Modal title</Modal.Title>
-//           </Modal.Header>
-//           <Modal.Body>
-//             I will not close if you click outside me. Don't even try to press
-//             escape key.
-//           </Modal.Body>
-//           <Modal.Footer>
-//             <Button variant="secondary" onClick={handleClose}>
-//               Close
-//             </Button>
-//             <Button variant="primary">Understood</Button>
-//           </Modal.Footer>
-//         </Modal>
-//       </div>
-//     );
-//   }
-  
-//   export default Example
+  export default ModalEdit
