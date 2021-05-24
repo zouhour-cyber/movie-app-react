@@ -11,6 +11,7 @@
   color:white;
   margin-bottom: 0px;
   overflow: hidden;
+  margin:0;
  
 }
 p{
@@ -29,7 +30,7 @@ h1,h2,h3{
   /* background-image: linear-gradient(rgba(1,1,1,0.9), rgba(1,1,1,0.7),rgba(0,0,0,0.2),rgba(0,0,0,0.1)); */
  /* border-bottom: 1px groove rgb(156, 155, 155); */
  background-color: black;
- padding: 0.2rem 3rem ;
+ padding: 0.2rem 4rem ;
 }
 
 /*--------------style banner home-------*/
@@ -220,20 +221,19 @@ border:none;} */
 
 /*style searchbar extensible  dans navbar*/
 
- Form{
+ #searchbar{
   position: relative;
   
   transition: all 1s;
   
   box-sizing: border-box;
   border-radius: 25px;
- 
-  padding: 5px;
-  width: 20px;
+  padding: 0.2rem 2rem;
+  width: 30px;
   height: 30px;
 }  
 
-input{
+#searchinput{
   position: absolute;
   top: 0;
   left: 0;
@@ -245,7 +245,7 @@ input{
   display: none;
   font-size: 1em;
   border-radius: 20px;
-  padding: 0 20px;
+  padding: 0px 60px;
  
 }
 .fas{
@@ -256,15 +256,15 @@ input{
 }
 
 
-Form:hover{
+#searchbar:hover{
   width: 200px;
   cursor: pointer;
 }
 
-Form:hover input{
+#searchbar:hover input{
   display: block;
 }
-Form:hover .fas{
+#searchbar:hover .fas{
   position: absolute;
   z-index:10;
   color: black;
@@ -438,3 +438,14 @@ height:auto;
     width: 50%;
     overflow: hidden;
 }
+
+.bgwhite{
+  background-color: white;
+}
+
+.mtop{padding-top: 5rem;
+
+}
+
+
+

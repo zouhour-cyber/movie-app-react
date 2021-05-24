@@ -29,15 +29,13 @@ function Menu({ handelChange , favorite}) {
       <Link to="/serie">Series</Link>
     
     </Nav>
- 
+ <div  id="searchbar"> 
     <Form className="mr-4">
-  <input type="search" placeholder="search"  onChange={handelChange} /> 
-   
-  
+  <input  id="searchinput" type="search" placeholder="search"  onChange={handelChange} /> 
   <i  className="fas fa-search"></i>
 
 </Form>
-
+</div>
    <Link to="/favoris" className="iconav"> <i class="far fa-heart  mr-4" ></i> <span className="badge badge-danger rounded-circle">{favorite}</span></Link>
     
   </Navbar.Collapse>

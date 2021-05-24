@@ -9,19 +9,17 @@ function Home ({movie, addFAvorite, favorite, addfavoriteMovie}){
     const handelChange=(e)=>{
        setSearch(e.target.value);
     }
-
     return (
         <div>
-    
+   <Menu handelChange={handelChange} favorite={favorite} /> 
     <Container className="banner" fluid>
-    <Menu handelChange={handelChange} search={search} favorite={favorite} /> 
     <Row className="d-flex justify-content-evenly mx-auto">
       <Col md={6} xs={10} className="ml-auto max-height text-justify" >
         <h5 class="text-banner">Films, Séries TV Et Bien Plus En Illimité.</h5>
         <h5> strange black entity from another world bonds with <br></br>
              Peter Parker and causes inner turmoil as </h5>
         
-   <Row> 
+    <Row> 
    <Col md={6} xs={10} className="mt-4">
      
        <Button variant="danger"> Start your free 14-days trial </Button>
@@ -61,8 +59,8 @@ function Home ({movie, addFAvorite, favorite, addfavoriteMovie}){
       <InputGroup >
       <FormControl type="text"  id="newsletter"  placeholder="Saisir votre adresse e-mail" />
       <InputGroup.Append>
-          <Button  variant="danger" type="submit"  > s'abonner</Button>
-    </InputGroup.Append>
+       <Button  variant="danger" type="submit"  > s'abonner</Button>
+       </InputGroup.Append>
         </InputGroup>
         </Col>
       

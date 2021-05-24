@@ -37,9 +37,9 @@ function Serie ({  favorite ,addFAvorite, addfavoriteMovie}){
   <Row className="mx-auto my-5"> 
   <Col md={6} xs={12} className="mx-auto py-4">
       <InputGroup >
-      <FormControl type="text"  placeholder="Recherchez votre film préféré" onChange={handelChange}  />
+      <FormControl type="text"  placeholder="Recherchez vos séries préférées" onChange={handelChange}  />
       <InputGroup.Append>
-          <Button  variant="danger" type="submit"  > search</Button>
+          <Button  variant="danger" type="submit"  > Rechercher</Button>
     </InputGroup.Append>
         </InputGroup>
         </Col>

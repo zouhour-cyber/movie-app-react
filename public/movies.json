@@ -27,6 +27,6 @@
 },
  {"title":"The pursuit of dreams", "image" :"./image/thepursuitofdreams.webp", "genre":"Adventure" , "rating":"4" ,"year":"2018" ,"duré":"145min"}
     ,{"title":"The birds", "image" :"./image/the-birds.webp", "genre":"Documentaire" , "rating":"4.5" ,"year":"2018" ,"duré":"150min"}
-    ,{"title": "Get Out", "image": "./image/hikaru copy.jpg","duration": "50 min", "genre": [ "Horror","Mystery" ] , "rating":"3.5" ,"year":"2017" ,"duré":"160min"}
+    ,{"title": "Get Out", "image": "./image/hikaru copy.jpg", "genre": [ "Horror","Mystery" ] , "rating":"3.5" ,"year":"2017" ,"duré":"160min"}
 
   ]
