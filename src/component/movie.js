@@ -3,6 +3,7 @@ import {Row, Col, Container,Badge} from 'react-bootstrap';
 import Rater from 'react-rater';
 import 'react-rater/lib/react-rater.css'
 
+
 function Movie ({search, movie, addFAvorite, addfavoriteMovie}) {
 
   return(
@@ -10,14 +11,14 @@ function Movie ({search, movie, addFAvorite, addfavoriteMovie}) {
       <Container fluid >
      <Row className="d-flex bgcards">
        
-     {movie.filter(el => el.title.toLowerCase().includes(search.toLowerCase()))
+     {movie.filter(el => el.title.toLowerCase().includes(search.toLowerCase())) 
     .map(el=> 
      <Col md={3} sm={6} xs={12} className="mt-3">
           <div className="cardexp">
           <div className="imgfilm mb-3"> <img src={el.image} alt="imagemovie" className="imgexp"/> 
           <ul className="product-links">
             <li><a onClick={()=>{ addFAvorite(); addfavoriteMovie(el)}}><i class="fa fa-heart "></i></a></li>
-             <li><a href="youtube.comhttps://www.youtube.com/watch?v=wNFkFXORgQ"><i class="fa fa-play"></i></a></li>
+             <li><a href="#"><i class="fa fa-play"></i></a></li>
           </ul>
           
           <div className="content">

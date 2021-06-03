@@ -2,7 +2,7 @@ import {useState} from 'react'
 import {Button, Modal, Form , Row, Col} from 'react-bootstrap'
 import axios from 'axios'
 
-    export const ModalEdit = ({element,x}) => {
+    export const ModalEdit = ({Refresh, element,x}) => {
     
     // Update Modal states//
     const [show, setShow] = useState(false);
@@ -27,12 +27,14 @@ import axios from 'axios'
                        console.log('Data : ', response.data)
                        setInput(response.data)
                     })
+     .then(res => Refresh())
+               
     .catch(error => console.error('error', error)
     )}
 
   return(
       <>
-    <Button variant="warning" onClick={handleShowUpdated}><i class="far fa-edit"></i></Button>
+    <Button variant="warning" className="btn-sm" onClick={handleShowUpdated}><i class="far fa-edit"></i></Button>
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
             <Modal.Title>Noxe </Modal.Title>

@@ -14,14 +14,14 @@ const Favoris =({favorite, favoritMovie, removeFavoriteMovie, removeFavoriteMovi
 
         return (
             <div>
-                <Container className="bannerAbout" fluid> 
-                <Menu favorite={favorite} handelChange={handelChange} />
-                <Container>
-                    <Row className="max-height">  
-                 <Col md={5}> <h1 className="text-banner"> Mes Favoris</h1>   </Col>
-                    </Row>
-                </Container>
-                </Container>
+            <Container className="bannerAbout" fluid> 
+            <Menu favorite={favorite} handelChange={handelChange} />
+            <Container>
+            <Row className="max-height">  
+            <Col md={5}> <h1 className="text-banner"> Mes Favoris</h1>   </Col>
+            </Row>
+            </Container>
+            </Container>
 
 
 

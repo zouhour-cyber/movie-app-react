@@ -1,16 +1,15 @@
 import React , {useState,useEffect} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import  Footer from './component/footer';
 import Favoris from './component/favoris';
 import Serie from './component/serie';
 import About from './component/about';
 import Home from './component/home';
 import { BrowserRouter, Route} from "react-router-dom";
-import Admin from './component/Admin';
+// import Admin from './component/Admin';
 import Dash from './component/dashtable';
 import axios from 'axios';
-import Watched from './component/watched';
+// import Watched from './component/watched';
 
 function App() {
   // ---------------------------- Récupérer les films -----------------------------------------//
@@ -69,9 +68,9 @@ function App() {
           <Route path="/about"> <About movie={movie}  favorite={favorite}  addFAvorite={addFAvorite} addfavoriteMovie={addfavoriteMovie} /></Route>
           <Route path="/serie" > <Serie favorite={favorite} addfavoriteMovie={addfavoriteMovie} favoritMovie={favoritMovie} addFAvorite={addFAvorite}/></Route>
           <Route path="/favoris"> <Favoris removeFavoriteMovieAll={removeFavoriteMovieAll} removeFavoriteMovie={removeFavoriteMovie} movie={movie} favorite={favorite} favoritMovie={favoritMovie}/></Route>
-          <Route path="/Admin" ><Admin movie={movie} > </Admin>  </Route>
+          {/* <Route path="/Admin" ><Admin movie={movie} > </Admin>  </Route> */}
           <Route path="/Dash" ><Dash movie={movie} > </Dash>  </Route>
-          <Route path="Watched"> <Watched/> </Route>
+          {/* <Route path="Watched"> <Watched/> </Route> */}
 
      </div>
   </BrowserRouter>
