@@ -9,38 +9,41 @@ import Home from './component/home';
 import { BrowserRouter, Route} from "react-router-dom";
 import Admin from './component/Admin';
 import Dash from './component/dashtable';
-
 import axios from 'axios';
+import Watched from './component/watched';
 
 function App() {
-  // ---------------------------- Récupérer les films -----------------------------------------/
-  const url= 'https://newdash-291b6-default-rtdb.europe-west1.firebasedatabase.app/posts.json'
+  // ---------------------------- Récupérer les films -----------------------------------------//
   
     const [movie, setMovie] = useState([])
 
-    const getmovie = ()=>{ axios.get(url)
-    .then (res => { 
-      setMovie(res.data)
-     console.log("response:", res);
-     });
+    const getmovie = ()=> {  
+      axios.get('https://newdash-291b6-default-rtdb.europe-west1.firebasedatabase.app/posts.json')
+     .then (res => {   setMovie(res.data)
+                        console.log("response:", res); 
+                     });
+     
   }
   useEffect(()=> {getmovie()
   },[])
 
-  //-----------------------Notification favorit --------------------------------------------------/
+  //-----------------------Notification favorit -------------------------------------------------//
+
   const [favorite,setFavorite] =useState(0)
+
   const addFAvorite=() =>{
     setFavorite(favorite + 1)
   }
 
-  //Ajout à la  page favorit
+  //---------------------Ajout à la  page favorit-------------------------------------------------//
   const [favoritMovie,setfavoritMovie]=useState([])
   const addfavoriteMovie =(e)=> {
     favoritMovie.push(e)
   
   console.log(favoritMovie) }
 
-  //remove item from favorit
+  //---------------------Remove item from favorit-------------------------------------------------//
+
   const removeFavoriteMovie=(el)=>{
     let index = favoritMovie.indexOf(el)
     favoritMovie.splice(index,1)
@@ -48,13 +51,15 @@ function App() {
      setFavorite(favorite-1)
   } 
 
-  //remove all items  from favorit
+  //---------------------Remove all items  from favorit-------------------------------------------//
   const removeFavoriteMovieAll=()=>{
     let length = favoritMovie.length
      favoritMovie.splice(0,length)
      setfavoritMovie(favoritMovie)
      setFavorite(favorite-length)
   } 
+
+
 
   return (
   <BrowserRouter>
@@ -66,8 +71,8 @@ function App() {
           <Route path="/favoris"> <Favoris removeFavoriteMovieAll={removeFavoriteMovieAll} removeFavoriteMovie={removeFavoriteMovie} movie={movie} favorite={favorite} favoritMovie={favoritMovie}/></Route>
           <Route path="/Admin" ><Admin movie={movie} > </Admin>  </Route>
           <Route path="/Dash" ><Dash movie={movie} > </Dash>  </Route>
+          <Route path="Watched"> <Watched/> </Route>
 
-     <Footer/>
      </div>
   </BrowserRouter>
   )}

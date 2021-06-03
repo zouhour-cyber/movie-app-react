@@ -4,34 +4,32 @@ import axios from 'axios'
 
     export const ModalEdit = ({element,x}) => {
     
-    //Declaring Update Modal states=========================
+    // Update Modal states//
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShowUpdated = () => setShow(true);
 
-    //Posting data from db.json================================
-    //Declaring form input's state
+  
+    // input's state //
     const [input, setInput] = useState(
       { title:element.title , genre:element.genre, image:element.image, rating:element.rating, year:element.year, duré:element.duré} )
 
-    
-
-    //Handle Change============================================
-    const handleChangeUpdate = e => {
+    //Handle Change//
+    const handleChangeUpdate = (e) => {
         const {name, value} = e.target
         setInput({...input, [name]:value})
     }
 
-    //Editing data from db.json================================
+    //Modifier le film //
     const handleUpdate = async (id) => {
     await axios.put(`https://newdash-291b6-default-rtdb.europe-west1.firebasedatabase.app/posts/${id}.json`,input)
-    .then(response => {console.log('Status:' , response.status)
+    .then(response => {
                        console.log('Data : ', response.data)
-                       setInput(response.data)})
-    .catch(error => console.error('something went wrong', error)
+                       setInput(response.data)
+                    })
+    .catch(error => console.error('error', error)
     )}
 
-    
   return(
       <>
     <Button variant="warning" onClick={handleShowUpdated}><i class="far fa-edit"></i></Button>
@@ -44,8 +42,6 @@ import axios from 'axios'
               <Row> 
                 <Col  md={10} className="mx-auto my-3" > 
             <Form>
-           
-
                 <Form.Group controlId="formBasicPassword">
                     <Form.Control className="form" type="text" placeholder="Enter the title" 
                     name="title"

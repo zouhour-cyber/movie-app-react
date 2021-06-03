@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import Rater from 'react-rater';
 import 'react-rater/lib/react-rater.css'
-// import Menu from './navbar'
 import {Container , Button ,Form,  Col , Row } from 'react-bootstrap';
 import axios from 'axios';
 import { ProSidebar, Menu, MenuItem, SidebarContent, SidebarHeader , SidebarFooter} from 'react-pro-sidebar';
@@ -16,7 +15,7 @@ const Dash = ({movie}) => {
     const [input, setInput] = useState(
         { title :"" , genre:"" , image:"", rating:"", year:"", duré:""}
     )
-    //Récupérer la valeur de l'input
+    //-------Récupérer la valeur des inputs----------//
     const handelChange=(e)=> {
       
         const {name , value} =e.target;
@@ -26,14 +25,14 @@ const Dash = ({movie}) => {
         })
        
     }
-   //---- Post------------// 
+   //-------------- Poster les films ---------------// 
     const handelSubmit=(e) => {
       console.log("posttttttttttttttttttttttt",input)      
       axios.post('https://newdash-291b6-default-rtdb.europe-west1.firebasedatabase.app/posts.json',input)
       .then(res=>  console.log(res))
       }
      
-   //---- delete------------// 
+   //--------------Supprimer les films-------------// 
      const supprimer= (id) =>{
        console.log("biiiiiiiiiiiiiiiiiiiiiib" ,id)
        axios.delete(`https://newdash-291b6-default-rtdb.europe-west1.firebasedatabase.app/posts/${id}.json`)
@@ -41,13 +40,13 @@ const Dash = ({movie}) => {
          .catch(error=>console.log("error",error))
      }
    
-   // function modal 0
+   //---------- Post Modal states --------------------//
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
     return (
         <div >
- {/* <Menu favorite={favorite} handelChange={handelChange} className="mb-5" /> */}
             
    <Row className="d-flex justify-content-between dash">
      <Col md={2}> 

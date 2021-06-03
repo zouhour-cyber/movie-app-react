@@ -2,6 +2,7 @@ import React , {useState,useEffect} from 'react';
 import {Row, Col, Container,Badge , InputGroup , FormControl ,Button } from 'react-bootstrap';
 import Rater from 'react-rater';
 import 'react-rater/lib/react-rater.css'
+import Footer from './footer';
 import Menu from './navbar'
 
 function Serie ({  favorite ,addFAvorite, addfavoriteMovie}){
@@ -129,7 +130,8 @@ function Serie ({  favorite ,addFAvorite, addfavoriteMovie}){
      
      </Container>}
           
-           
+     <Footer/>
+     
             </div>
         )
 

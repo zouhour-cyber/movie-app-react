@@ -3,6 +3,7 @@ import Menu from './navbar'
 import {Row, Col, Container,Badge , Button } from 'react-bootstrap'
 import Rater from 'react-rater';
 import 'react-rater/lib/react-rater.css'
+import Footer from './footer';
 
 
 const Favoris =({favorite, favoritMovie, removeFavoriteMovie, removeFavoriteMovieAll}) => {
@@ -25,8 +26,9 @@ const Favoris =({favorite, favoritMovie, removeFavoriteMovie, removeFavoriteMovi
 
 
       <Container fluid>
-      <Button variant="danger"  className="btn-lg" onClick={()=> removeFavoriteMovieAll()}> Vider</Button>       
-
+          <div className="d-flex justify-content-end mt-5"> 
+      <Button variant="outline-light"   onClick={()=> removeFavoriteMovieAll()}> <i class="fa fa-trash-alt mr-2"></i> Supprimer tout</Button>       
+      </div>
        <Row className="d-flex p-5">
          {favoritMovie.filter(el => el.title.toLowerCase().includes(search.toLowerCase()))
          .map(el=> 
@@ -65,7 +67,8 @@ const Favoris =({favorite, favoritMovie, removeFavoriteMovie, removeFavoriteMovi
                
                
                  </Container> 
-              
+                 <Footer/>
+
             </div>
 
             

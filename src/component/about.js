@@ -2,6 +2,7 @@ import React , {useState}  from 'react'
 import Menu from './navbar'
 import Movie from '../component/movie';
 import {Row, Col, Container , InputGroup , FormControl ,Button } from 'react-bootstrap';
+import Footer from './footer';
 
 
 function About({ movie, addFAvorite, favorite, addfavoriteMovie}){
@@ -66,7 +67,8 @@ function About({ movie, addFAvorite, favorite, addfavoriteMovie}){
    
   
                
-              
+   <Footer/>
+ 
             </div>
         )
     }

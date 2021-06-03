@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import Movie from '../component/movie';
 import Menu from './navbar';
 import {Row, Col, Container , InputGroup , FormControl ,Button } from 'react-bootstrap';
+import Footer from './footer';
 
 
 function Home ({moviemd, movie, addFAvorite, favorite, addfavoriteMovie}){
@@ -89,6 +90,7 @@ function Home ({moviemd, movie, addFAvorite, favorite, addfavoriteMovie}){
     </Container>
 
 
+    <Footer/>
 
     </div>
     )
