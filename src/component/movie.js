@@ -6,12 +6,12 @@ import 'react-rater/lib/react-rater.css'
 function Movie ({search, movie, addFAvorite, addfavoriteMovie}) {
 
   return(
+    <div>
       <Container fluid >
      <Row className="d-flex bgcards">
        
-     {  movie.filter(el => 
-    ( el.title.toLowerCase().includes(search.toLowerCase()) ) 
-     ).map(el=> 
+     {movie.filter(el => el.title.toLowerCase().includes(search.toLowerCase()))
+    .map(el=> 
      <Col md={3} sm={6} xs={12} className="mt-3">
           <div className="cardexp">
           <div className="imgfilm mb-3"> <img src={el.image} alt="imagemovie" className="imgexp"/> 
@@ -41,7 +41,7 @@ function Movie ({search, movie, addFAvorite, addfavoriteMovie}) {
    ) }
    </Row>
    </Container>
-
+   </div>
 
   ) 
  }

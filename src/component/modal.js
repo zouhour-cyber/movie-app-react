@@ -1,82 +1,98 @@
-import {React ,useState ,useEffect} from 'react';
-import {Modal, Button , Form, Col , Row } from 'react-bootstrap';
-import axios from 'axios';
+import {useState} from 'react'
+import {Button, Modal, Form , Row, Col} from 'react-bootstrap'
+import axios from 'axios'
 
-const ModalEdit=({el}) =>{
-    const [show, setShow] = useState(false)
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    export const ModalEdit = ({element,x}) => {
     
-    const [UpdatedAt,setUpdatedAt] = useState( 
-        { title :el.title , genre:el.genre , image:el.image, rating:el.rating, year:el.year, duré:el.duré}
-      )
+    //Declaring Update Modal states=========================
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShowUpdated = () => setShow(true);
 
-    const handelUpdate=(e)=>{
-        const {name , value} =e.target;
-        setUpdatedAt( {
-            ...UpdatedAt,
-            [name]: value
-        })
-      }
-      console.log(UpdatedAt);
-        //update 
-        const update=(id) =>{
-            axios.put(`http://localhost:3007/posts/${id}`,UpdatedAt)
-            .then((res) => {setUpdatedAt(res.data)})
-          
-          .catch(err => console.log(err));
-        }
-          useEffect(() => {
-            update() 
-        }, [])
+    //Posting data from db.json================================
+    //Declaring form input's state
+    const [input, setInput] = useState(
+      { title:element.title , genre:element.genre, image:element.image, rating:element.rating, year:element.year, duré:element.duré} )
 
-    return (
-      <div>
-      <li>  <a  onClick={handleShow}>
-        <i class="fas fa-pencil-alt"></i>
-        </a> </li>
-  
-        <Modal
-        show={show} onHide={handleClose}
-        >
-          <Modal.Header closeButton>
+    
+
+    //Handle Change============================================
+    const handleChangeUpdate = e => {
+        const {name, value} = e.target
+        setInput({...input, [name]:value})
+    }
+
+    //Editing data from db.json================================
+    const handleUpdate = async (id) => {
+    await axios.put(`https://newdash-291b6-default-rtdb.europe-west1.firebasedatabase.app/posts/${id}.json`,input)
+    .then(response => {console.log('Status:' , response.status)
+                       console.log('Data : ', response.data)
+                       setInput(response.data)})
+    .catch(error => console.error('something went wrong', error)
+    )}
+
+    
+  return(
+      <>
+    <Button variant="warning" onClick={handleShowUpdated}><i class="far fa-edit"></i></Button>
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
             <Modal.Title>Noxe </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-         
-         
-          <Row > 
-        <Col   md={10} className="mx-auto mb-5">
-          
-        <Form >
-      <Form.Group  >
-     <Form.Control type="text" name="title" onChange={handelUpdate} defaultValue={el.title} placeholder="Titre de film" />
-     </Form.Group>
-     <Form.Group>
-     <Form.Control type="text" name="genre" onChange={handelUpdate}  defaultValue={el.genre}placeholder="Genre de film" />
-     </Form.Group>
-     <Form.Group>
-     <Form.Control type="text" name="duré" onChange={handelUpdate} defaultValue={el.duré} placeholder="Durée de film"  />
-     </Form.Group>
-     <Form.Group>
-     <Form.Control type="text" name="image" onChange={handelUpdate} defaultValue={el.image} placeholder="Poster de film"  />
-     </Form.Group>
-     <Form.Group>
-     <Form.Control type="text" name="rating" onChange={handelUpdate} defaultValue={el.rating} placeholder="Rating"  />
-     </Form.Group>
-     <Form.Group>
-     <Form.Control type="text" name="year" onChange={handelUpdate} defaultValue={el.year} placeholder="Date de sortie "  />
-     </Form.Group>
-     <Button  onClick={()=> update(el.id) } type="submit" variant="danger"  className="btn-block">  Modifier le film</Button>
-   </Form>
-   </Col>
-   
-   </Row>
-          </Modal.Body>
-        
+            </Modal.Header>
+
+            <Modal.Body>
+              <Row> 
+                <Col  md={10} className="mx-auto my-3" > 
+            <Form>
+           
+
+                <Form.Group controlId="formBasicPassword">
+                    <Form.Control className="form" type="text" placeholder="Enter the title" 
+                    name="title"
+                    defaultValue={element.title}
+                    onChange={handleChangeUpdate}/>
+                </Form.Group>
+
+                <Form.Group controlId="formBasicPassword">
+                    <Form.Control className="form" type="text" placeholder="Enter the genre" 
+                    name = "genre"
+                    defaultValue={element.genre}
+                    onChange={handleChangeUpdate}/>
+                </Form.Group>
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Control className="form" type="text" placeholder="Enter URL Image"
+                    name = "image"
+                    defaultValue={element.image} 
+                    onChange={handleChangeUpdate}/>
+                </Form.Group>
+                <Form.Group controlId="formBasicPassword">
+                    <Form.Control className="form" type="text" placeholder="Enter the rating" 
+                    name = "rating"
+                    defaultValue={element.rating}
+                    onChange={handleChangeUpdate}/>
+                </Form.Group>
+                <Form.Group controlId="formBasicPassword">
+                    <Form.Control className="form" type="text" placeholder="Enter the year" 
+                    name = "year"
+                    defaultValue={element.year}
+                    onChange={handleChangeUpdate}/>
+                </Form.Group>
+                <Form.Group controlId="formBasicPassword">
+                    <Form.Control className="form" type="text" placeholder="Enter the duration" 
+                    name = "duré"
+                    defaultValue={element.duré}
+                    onChange={handleChangeUpdate}/>
+                </Form.Group>
+            </Form>
+            <Button variant="danger" className="btn-block" onClick={()=>handleUpdate(x)}>
+                Save Changes
+            </Button>
+            </Col>
+            </Row>
+            </Modal.Body>
+            
+           
         </Modal>
-      </div>
-    );
-  }
-  
-  export default ModalEdit
+        </>
+    )
+}

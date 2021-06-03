@@ -4,7 +4,7 @@ import Menu from './navbar';
 import {Row, Col, Container , InputGroup , FormControl ,Button } from 'react-bootstrap';
 
 
-function Home ({movie, addFAvorite, favorite, addfavoriteMovie}){
+function Home ({moviemd, movie, addFAvorite, favorite, addfavoriteMovie}){
     const [search, setSearch] = useState("");
     const handelChange=(e)=>{
        setSearch(e.target.value);
@@ -84,7 +84,7 @@ function Home ({movie, addFAvorite, favorite, addfavoriteMovie}){
 </Container>
    <Container  className="bgcards" fluid>
    <h1 className="text-center my-5">  Our latest movies </h1>
-   <Movie search={search} movie={movie} addFAvorite={addFAvorite} favorite={favorite} addfavoriteMovie={addfavoriteMovie} />   
+   <Movie search={search} moviemd={moviemd} movie={movie} addFAvorite={addFAvorite} favorite={favorite} addfavoriteMovie={addfavoriteMovie} />   
      
     </Container>
 

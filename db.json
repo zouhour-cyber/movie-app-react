@@ -1,8 +1,8 @@
 {
   "posts": [
     {
-      "title": "Dragon",
-      "genre": "Comedy ,Musical",
+      "title": "Dragon daughter",
+      "genre": "Comedy",
       "image": "./image/dragon daughter.webp",
       "rating": "4.5",
       "year": "2021",
@@ -166,14 +166,8 @@
       "duré": "160min"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [ ],
   "profile": {
-    "name": "typicode"
+   "name": "typicode"
   }
 }
