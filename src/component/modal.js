@@ -36,13 +36,13 @@ import axios from 'axios'
       <>
     <Button variant="danger" className="btn-sm brown"  onClick={handleShowUpdated}><i class="far fa-edit"></i></Button>
         <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-            <Modal.Title>Noxe </Modal.Title>
+            <Modal.Header closeButton className="bgdark">
+            <Modal.Title> <h1>Noxe </h1> </Modal.Title>
             </Modal.Header>
 
-            <Modal.Body>
+            <Modal.Body className="bgdark">
               <Row> 
-                <Col  md={10} className="mx-auto my-3" > 
+                <Col  md={10} className="mx-auto my-4" > 
             <Form>
                 <Form.Group controlId="formBasicPassword">
                     <Form.Control className="form" type="text" placeholder="Enter the title" 
@@ -82,7 +82,7 @@ import axios from 'axios'
                     onChange={handleChangeUpdate}/>
                 </Form.Group>
             </Form>
-            <Button variant="danger" className="btn-block" onClick={()=>handleUpdate(x)}>
+            <Button id="uppercase" variant="danger" className="btn-block" onClick={()=>handleUpdate(x)}>
                 Save Changes
             </Button>
             </Col>

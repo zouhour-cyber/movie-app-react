@@ -35,6 +35,7 @@ function App() {
   }
 
   //---------------------Ajout à la  page favorit-------------------------------------------------//
+  
   const [favoritMovie,setfavoritMovie]=useState([])
   const addfavoriteMovie =(e)=> {
     favoritMovie.push(e)

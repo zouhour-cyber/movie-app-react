@@ -135,11 +135,12 @@ const Dash = ({movie}) => {
      <Form.Control type="text" name="year" onChange={handelChange} placeholder="Year "  />
      </Form.Group>
    </Form>
+   <Button onClick={handelSubmit}  variant="danger" id ="uppercase" className="btn-block mt-4 text-transform-uppercase">  Add movie </Button>
+
    </Col>
    
    </Row>
    </Modal.Body>
-   <Button onClick={handelSubmit}  variant="danger" className="btn-block text-transform-uppercase">  Add movie </Button>
 
     </Modal>
 
