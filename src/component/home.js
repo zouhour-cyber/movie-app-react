@@ -16,9 +16,8 @@ function Home ({moviemd, movie, addFAvorite, favorite, addfavoriteMovie}){
     <Container className="banner" fluid>
     <Row className="d-flex justify-content-evenly mx-auto">
       <Col md={6} xs={10} className="ml-auto max-height text-justify" >
-        <h5 class="text-banner">Films, Séries TV Et Bien Plus En Illimité.</h5>
-        <h5> strange black entity from another world bonds with <br></br>
-             Peter Parker and causes inner turmoil as </h5>
+        <h4 className="text-banner  ">Unlimited movies, TV shows, and more.</h4>
+        <h4 className="mt-3">Watch anywhere. Cancel anytime. </h4>
         
     <Row> 
    <Col md={6} xs={10} className="mt-4">
@@ -36,10 +35,10 @@ function Home ({moviemd, movie, addFAvorite, favorite, addfavoriteMovie}){
     <Container className="device" fluid>
         <Row className="d-flex justify-content-center">
             <Col md={5} xs={10}>
-                <div className="text ">
-                    <h2 className="mb-3">Où que vous soyez</h2>
-                    <h4>Regardez des films et séries TV en accès illimité sur votre TV, smartphone, tablette et ordinateur, tout compris.</h4>
-                </div>
+            <div className="text ">
+    <h2 className="mt-5"> Watch everywhere.</h2>
+     <h4 className="mt-3">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</h4>
+     </div>
             </Col>
             <Col md={6} xs={12}>
           <div><img src="image/device.png" alt="device" /></div>
@@ -51,16 +50,16 @@ function Home ({moviemd, movie, addFAvorite, favorite, addfavoriteMovie}){
     <Container className="bg-white " fluid>
     <Row  className="justify-content-center  title-banner">
       <Col md={10} xs={10} className="mx-auto text-center " >
-        <h1 class="text-capitalize">Rejoignez notre communauté</h1>
+        <h1 class="text-capitalize mb-3"> Ready to watch ? Join us </h1>
         <h5>Abonnez-vous pour reçevoir nos offres</h5>
 
         </Col> 
  
       <Col md={6} xs={12} className="mx-auto mt-5">
       <InputGroup >
-      <FormControl type="text"  id="newsletter"  placeholder="Saisir votre adresse e-mail" />
+      <FormControl type="text"  id="newsletter"  placeholder="Enter your  e-mail adress " />
       <InputGroup.Append>
-       <Button  variant="danger" type="submit"  > s'abonner</Button>
+       <Button  variant="danger" type="submit"  > Get started </Button>
        </InputGroup.Append>
         </InputGroup>
         </Col>
@@ -72,14 +71,16 @@ function Home ({moviemd, movie, addFAvorite, favorite, addfavoriteMovie}){
     <Container >
 
 <Row  className="my-5">
-    <Col md={6} xs={12} className="">
-        <img src="image/mobile.png" alt="mobile"/> 
+    <Col md={6} xs={12} className=""  >
+      <img src="image/mobile.png" alt="mobile"/> 
       </Col>
     <Col md={5} xs={10} >
-        <div className="text ">
-    <h2 className="mt-5"> Téléchargez vos séries préférées pour les regarder hors connexion.</h2>
-     <p className="mt-3"> Enregistrez vos programmes préférés et ayez toujours quelque chose à regarder.</p>
-     </div>
+    <div className="text ">
+                    <h2  
+                    className=" mt-5 mb-3">Download your shows to watch offline.</h2>
+                    <h4>Save your favorites easily and always have something to watch.</h4>
+                </div>
+      
     </Col>
 </Row>
 </Container>

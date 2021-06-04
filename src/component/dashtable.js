@@ -82,66 +82,68 @@ const Dash = ({movie}) => {
       {/* <h5 className="mb-4"> Admin@gmail.com</h5> */}
  </SidebarHeader>
     <SidebarContent className="my-5">
+    <MenuItem> <a  onClick={handleShow}> <i class="fa fa-plus  mr-3 "></i> Add movie </a> </MenuItem>
 
-    <MenuItem> <Link to="/">  Dashboard </Link> </MenuItem>
 
-      <MenuItem> <Link to="/">  Home  </Link> </MenuItem>
-      <MenuItem> <Link to="/about">Movies</Link></MenuItem>
-      <MenuItem>  <Link to="/serie">Series</Link></MenuItem>
+      <MenuItem> <Link to="/">  <i class="fa fa-home  mr-3" ></i> Home  </Link> </MenuItem>
+      <MenuItem> <Link to="/about"> <i class="fa fa-video  mr-3"></i>Movies</Link></MenuItem>
+      <MenuItem>  <Link to="/serie"> <i class="fa fa-film mr-3"></i>Series</Link></MenuItem>
+      <MenuItem>  <Link to="/serie"> <i class="far fa-heart mr-3"></i>Favoris </Link></MenuItem>
+
+     
    </SidebarContent>
-    <SidebarFooter className="mt-5">
-    <MenuItem className="mt-2"> Users</MenuItem>
-    <MenuItem>Analytics</MenuItem>
-
-     </SidebarFooter>
+   <SidebarFooter className="pt-3">
+   <MenuItem >  <i class="fa fa-users mr-3"></i> Users</MenuItem>
+    <MenuItem > <i class="fa fa-chart-line mr-3"></i>Analytics</MenuItem>
+  </SidebarFooter>
      </Menu>
    </ProSidebar> 
      </Col>
-     <Col md={9} className="mtop bgwhite px-5 " >
+     <Col md={9} className="mtop bgwhite" >
           {/*modal  input */}
-          <div className="d-flex justify-content-end"> 
-       <Button variant="dark" className="px-5" onClick={handleShow}>
-        Ajouter un film
+          <div className="d-flex justify-content-end mr-3"  > 
+       <Button  id="uppercase" variant="dark" onClick={handleShow}>
+       <i class="fa fa-plus"></i>
       </Button>
       </div>
       <Modal show={show} onHide={handleClose} >
-        <Modal.Header closeButton>
-          <Modal.Title>Noxe </Modal.Title>
+        <Modal.Header closeButton  className="bgdark">
+          <Modal.Title> <h1> Noxe  </h1></Modal.Title>
         </Modal.Header>
-        <Modal.Body>   
+        <Modal.Body className="bgdark" >   
         <Row > 
         
-        <Col   md={10} className="mx-auto mb-5">
+        <Col   md={9} className="mx-auto my-4" >
           
         <Form >
       <Form.Group  >
-     <Form.Control type="text" name="title" onChange={handelChange} placeholder="Titre de film" />
+     <Form.Control type="text" name="title" onChange={handelChange} placeholder="Title" />
      </Form.Group>
      <Form.Group>
-     <Form.Control type="text" name="genre" onChange={handelChange} placeholder="Genre de film" />
+     <Form.Control type="text" name="genre" onChange={handelChange} placeholder="Genre" />
      </Form.Group>
      <Form.Group>
-     <Form.Control type="text" name="duré" onChange={handelChange} placeholder="Durée de film"  />
+     <Form.Control type="text" name="duré" onChange={handelChange} placeholder="Duration"  />
      </Form.Group>
      <Form.Group>
-     <Form.Control type="text" name="image" onChange={handelChange} placeholder="Poster de film"  />
+     <Form.Control type="text" name="image" onChange={handelChange} placeholder="Poster"  />
      </Form.Group>
      <Form.Group>
      <Form.Control type="text" name="rating" onChange={handelChange} placeholder="Rating"  />
      </Form.Group>
      <Form.Group>
-     <Form.Control type="text" name="year" onChange={handelChange} placeholder="Date de sortie "  />
+     <Form.Control type="text" name="year" onChange={handelChange} placeholder="Year "  />
      </Form.Group>
    </Form>
    </Col>
    
    </Row>
    </Modal.Body>
-   <Button onClick={handelSubmit}  variant="danger" className="btn-block">  Ajouter un film</Button>
+   <Button onClick={handelSubmit}  variant="danger" className="btn-block text-transform-uppercase">  Add movie </Button>
 
     </Modal>
 
-       <Container className="mt-5">
+       <Container className="mt-3">
 
  <Table  hover className="text-center" >
  <thead >
@@ -150,7 +152,9 @@ const Dash = ({movie}) => {
       <th>Tilte</th>
       <th>Genre</th>
       <th>Year </th>
+
       <th>Rating </th>
+
       <th>Actions </th>
 
 
@@ -164,6 +168,7 @@ const Dash = ({movie}) => {
       <td> {movie[el].title} </td>
       <td> {movie[el].genre} </td>
       <td> {movie[el].year} </td>
+
       <td> <Rater  interactive={false}  total={5} rating={movie[el].rating} /> </td>
       <td><Button variant="dark"  className="mr-2 btn-sm" onClick = {()=> supprimer(el)} ><i  class="fa fa-times"></i></Button> 
     <ModalEdit Refresh={Refresh} element={movie[el]} x={el} />  </td>

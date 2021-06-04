@@ -7,7 +7,10 @@
       "rating": "4.5",
       "year": "2021",
       "duré": "150min",
-      "id": 1
+      "id": 1,
+      "Actors": "Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+      "Plot": "While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power."
+     
     },
     {
       "id": 2,
@@ -19,7 +22,9 @@
       ],
       "rating": "4",
       "year": "2019",
-      "duré": "160min"
+      "duré": "160min",
+      "Actors": "Travis Fimmel, Clive Standen, Gustaf Skarsgård, Katheryn Winnick",
+      "Plot": "The world of the Vikings is brought to life through the journey of Ragnar Lothbrok, the first Viking to emerge from Norse legend and onto the pages of history."
     },
     {
       "id": 3,
@@ -31,7 +36,9 @@
       ],
       "rating": "3",
       "year": "2018",
-      "duré": "101min"
+      "duré": "101min",
+      "Actors": "Ben McKenzie, Donal Logue, David Mazouz, Sean Pertwee",
+     "Plot": "The series is a crime drama.The story behind Detective James Gordon's rise to prominence in Gotham City in the years before Batman's arrival." 
     },
     {
       "id": 4,
@@ -40,7 +47,10 @@
       "genre": "Adventure",
       "rating": "4.5",
       "year": "2019",
-      "duré": "110min"
+      "duré": "110min",
+      "Actors": "Omari Hardwick, Joseph Sikora, Andy Bean, Lela Loren",
+      "Plot": "James \"Ghost\" St. Patrick, a wealthy New York night club owner who has it all, catering for the city's elite and dreaming big, lives a double life as a drug kingpin."
+      
     },
     {
       "id": 5,
@@ -61,7 +71,10 @@
       ],
       "rating": "3.5",
       "year": "2018",
-      "duré": "162min"
+      "duré": "162min",
+      "Actors": "Omari Hardwick, Joseph Sikora, Andy Bean, Lela Loren",
+      "Plot": "James \"Ghost\" St. Patrick, a wealthy New York night club owner who has it all, catering for the city's elite and dreaming big, lives a double life as a drug kingpin."
+      
     },
     {
       "id": 7,

@@ -20,23 +20,23 @@ function Footer() {
     <h5> Ressources</h5>
     <h6>About us</h6>
     <h6>Contact us</h6>
-    <h6> Centre d'aide</h6>
+    <h6>News</h6>
  
     
     </Col>
     <Col md={3} xs={12} className="mt-3">
-    <h5>Compte</h5>
-    <h6> List de favoris</h6>
-    <h6> Collections</h6>
-    <h6> Nouveautés</h6>
+    <h5>Account</h5>
+    <h6>  Favorit list</h6>
+    <h6> Movies</h6>
+    <h6> Series</h6>
     
     </Col>
 
    <Col md={3} xs={12} className="mt-3">
       <h5> Newsletter </h5>
-      <p>  Saisissez votre adresse e-mail pour reçevoir nos actualités</p>
+      <p>   Enter your email to create or restart your membership.</p>
       <InputGroup>
-      <FormControl type="text" id="search-item" placeholder="Adresse e-mail"/>
+      <FormControl type="text" id="search-item" placeholder="E-mail adresse "/>
       <InputGroup.Append>
           <Button id="bs" type="submit"> <i class="fa fa-send mx-1"> </i></Button>
     </InputGroup.Append>

@@ -50,8 +50,9 @@ h1,h2,h3{
 .text-banner{
   font-family:'Bebas Neue', cursive;
   /* letter-spacing: .04em; */
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight:500;
+  padding-right:7rem;
 }
  .max-height{
    margin-top:10rem;
@@ -463,15 +464,18 @@ height:auto;
 }
 .pro-sidebar > .pro-sidebar-inner > .pro-sidebar-layout {
   height: 100%;
-
+  background-color: rgb(29, 29, 29);
   position: fixed;
   z-index: 1;
   top: 0;
+  left:0;
   overflow-x: hidden;
-  color:white;
   font-family: 'open sans' , sans-serif;
   font-size: 2rem;
+  
 }
+
+
 .pro-sidebar .pro-menu a {
   text-decoration: none;
 }
@@ -481,30 +485,87 @@ height:auto;
 padding:0.5rem 0rem;
 background-color: brown;
 border-radius: 5px;
-margin:2rem 0.5rem;
+margin:3rem 0.5rem 5rem 0.5rem;
+color: white;
 
 }
 .pro-menu-item{
   text-transform: uppercase;
-  padding:0.1rem;
+  padding:0.4rem;
+  padding-left:0.6rem;
+  
   
  }
- .pro-inner-item{
+ /* .pro-inner-item{
   color:white;
-
- }
+ 
+ } */
 .pro-menu-item:hover{
  background-color: #3f3e3e ;
- padding:0.1rem;
  color: white;
 }
 .imagetable{
-  height:180px;
-  width:150px;
+  height:200px;
+  width:160px;
  border-radius: 10%;
   padding:0px ;
 }
 
 .text-white{
   color:white;
+}
+
+
+ /* Animation */
+ .anim-typewriter{
+  animation: typewriter 6s steps(44) 1s 4 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.line-1{
+  position: relative;
+
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+ 
+  font-weight:bold;
+  font-style: italic; 
+}
+
+
+td{
+  font-family: 'open sans' , sans-serif;
+  font-size: 1rem;
+  
+
+}
+
+#uppercase{
+  text-transform: uppercase;
+}
+
+.brown{
+  background-color: brown;
+}
+
+.bgdark{
+background-color:rgba(0, 0, 0, 0.9);
+color:white;
+}
+
+.form-control{
+  border:none;
+  border-bottom:2px solid white;
 }

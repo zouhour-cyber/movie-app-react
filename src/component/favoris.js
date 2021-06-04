@@ -25,12 +25,13 @@ const Favoris =({favorite, favoritMovie, removeFavoriteMovie, removeFavoriteMovi
 
 
 
-      <Container fluid>
-          <div className="d-flex justify-content-end mt-5"> 
-      <Button variant="outline-light"   onClick={()=> removeFavoriteMovieAll()}> <i class="fa fa-trash-alt mr-2"></i> Supprimer tout</Button>       
-      </div>
-       <Row className="d-flex p-5">
-         {favoritMovie.filter(el => el.title.toLowerCase().includes(search.toLowerCase()))
+      <Container fluid className="mb-5">
+     
+          <div className="d-flex justify-content-end "> 
+      <Button variant="outline-light"  onClick={()=> removeFavoriteMovieAll()}> <i class="fa fa-trash-alt mr-2"></i> Remove all</Button>       
+      </div> 
+       <Row className="d-flex p-5 my-5">
+        { favoritMovie.length ? (favoritMovie.filter(el => el.title.toLowerCase().includes(search.toLowerCase()))
          .map(el=> 
                       <Col md={3} sm={6} xs={12} className="mt-3">
                            <div className="cardexp">
@@ -39,7 +40,6 @@ const Favoris =({favorite, favoritMovie, removeFavoriteMovie, removeFavoriteMovi
                            <ul className="product-links">
                               <li><a ><i class="fa fa-play"></i></a></li>
                               <li><a onClick={()=>removeFavoriteMovie(el)}><i class="fas fa-times"></i></a></li>
-
 
                            </ul>
                            
@@ -62,9 +62,9 @@ const Favoris =({favorite, favoritMovie, removeFavoriteMovie, removeFavoriteMovi
                            </div> 
                            </div>
                         </Col>
-                    ) }
+          ) ) : (<h3 > No favrites movies added </h3>) }
+
                     </Row>
-               
                
                  </Container> 
                  <Footer/>

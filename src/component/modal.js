@@ -34,7 +34,7 @@ import axios from 'axios'
 
   return(
       <>
-    <Button variant="warning" className="btn-sm" onClick={handleShowUpdated}><i class="far fa-edit"></i></Button>
+    <Button variant="danger" className="btn-sm brown"  onClick={handleShowUpdated}><i class="far fa-edit"></i></Button>
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
             <Modal.Title>Noxe </Modal.Title>
